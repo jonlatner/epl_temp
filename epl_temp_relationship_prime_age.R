@@ -73,6 +73,7 @@ df_temp_1 <- df_temp_0 %>%
                series == "PER_CENT_TEMP", # percent temporary
                age == "2554", # prime age workers
         ) %>%
+        select(-series) %>%
         rename(year=obstime,
                temp=obsvalue) %>%
         mutate(year = as.numeric(year)) %>%

@@ -73,6 +73,7 @@ df_temp_1 <- df_temp_0 %>%
                series == "PER_CENT_TEMP", # percent temporary
                age == "900000", # all workers
         ) %>%
+        select(-series) %>%
         rename(year=obstime,
                temp=obsvalue) %>%
         mutate(year = as.numeric(year)) %>%
@@ -141,7 +142,6 @@ ggplot(data = df_graph, aes(x = year)) +
               legend.key.width = unit(2,"cm"),
               legend.position = "bottom"
         )
-
 
 # Graphs the relationship between EPL (perm) and temporary employment
 df_graph <- df_merge %>%
