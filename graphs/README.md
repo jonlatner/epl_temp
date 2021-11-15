@@ -4,12 +4,12 @@ graph files are labeled accordingly:
 
 graph_epl[type]_temp_[age group]
 
-type is defined by: 
-P = EPL for permanent workers
-T = EPL for temporary workers
+type is defined by: <br />
+P = EPL for permanent workers <br />
+T = EPL for temporary workers <br />
 G = gap (P - T)
 
-age group is defined by:
-A = All ages
-P = Prime age (25-54)
+age group is defined by: <br />
+A = All ages <br />
+P = Prime age (25-54) <br />
 Y = Young age (15-24)
