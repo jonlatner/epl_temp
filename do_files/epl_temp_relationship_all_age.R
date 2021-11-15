@@ -62,7 +62,6 @@ df_epl <- df_epl %>%
 # Estimate EPL gap, similar to Passaretta and Wolbers, 2019
 # According to footnote 9, negatives values are imputed to 0
 # Yet more than 25% of all values are less than 0
-# JPL Comment: This seems to be bad science
 
 df_epl_diff <- pivot_wider(df_epl,names_from = series,values_from = epl)
 df_epl_diff$epl_gap <- with(df_epl_diff,perm_epl-temp_epl)
