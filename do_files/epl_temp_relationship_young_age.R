@@ -138,6 +138,7 @@ ggplot(data = df_graph, aes(x = year)) +
                 sec.axis = sec_axis(~./10, name="Temporary employment (%)")
         ) +
         geom_text(aes(label=paste("r = ", cor)), 
+                  size = 3, 
                   x=-Inf, y=Inf, hjust=-0.2, vjust=1.2)+
         theme(panel.grid.minor = element_blank(), 
               axis.line.y = element_line(color="black", size=.5),
@@ -146,7 +147,7 @@ ggplot(data = df_graph, aes(x = year)) +
               legend.key.width = unit(2,"cm"),
               legend.position = "bottom"
         )
-ggsave(filename = paste0(graphs,"graph_eplT_tempY.pdf"), plot = last_plot(), height = 6, width = 9, units = "in")
+ggsave(filename = paste0(graphs,"graph_eplT_tempY.pdf"), plot = last_plot(), height = 8, width = 12, units = "in")
 
 # Graphs the relationship between EPL (perm) and temporary employment
 df_graph <- df_merge %>%
@@ -162,7 +163,8 @@ ggplot(data = df_graph, aes(x = year)) +
                 name = "EPL (Permanent employment)",
                 sec.axis = sec_axis(~./10, name="Temporary employment (%)")
         ) +
-        geom_text(aes(label=paste("r = ", cor)), 
+        geom_text(aes(label=paste("r = ", cor)),
+                  size = 3, 
                   x=-Inf, y=Inf, hjust=-0.2, vjust=1.2)+
         theme(panel.grid.minor = element_blank(), 
               axis.line.y = element_line(color="black", size=.5),
@@ -171,7 +173,7 @@ ggplot(data = df_graph, aes(x = year)) +
               legend.key.width = unit(2,"cm"),
               legend.position = "bottom"
         )
-ggsave(filename = paste0(graphs,"graph_eplP_tempY.pdf"), plot = last_plot(), height = 6, width = 9, units = "in")
+ggsave(filename = paste0(graphs,"graph_eplP_tempY.pdf"), plot = last_plot(), height = 8, width = 12, units = "in")
 
 # Graphs the relationship between EPL (gap) and temporary employment
 df_graph <- df_merge_diff
@@ -187,6 +189,7 @@ ggplot(data = df_graph, aes(x = year)) +
                 sec.axis = sec_axis(~./10, name="Temporary employment (%)")
         ) +
         geom_text(aes(label=paste("r = ", cor)), 
+                  size = 3, 
                   x=-Inf, y=Inf, hjust=-0.2, vjust=1.2)+
         theme(panel.grid.minor = element_blank(), 
               axis.line.y = element_line(color="black", size=.5),
@@ -195,6 +198,6 @@ ggplot(data = df_graph, aes(x = year)) +
               legend.key.width = unit(2,"cm"),
               legend.position = "bottom"
         )
-ggsave(filename = paste0(graphs,"graph_eplG_tempY.pdf"), plot = last_plot(), height = 6, width = 9, units = "in")
+ggsave(filename = paste0(graphs,"graph_eplG_tempY.pdf"), plot = last_plot(), height = 8, width = 12, units = "in")
 
 

@@ -1,2 +1,2 @@
 # epl_temp
-Relationship between employment protection legislation and temporary employment
+Relationship between employment protection legislation (EPL) and the temporary employment rate.  The idea is that much research assumes a relationship between the two.  While this may be true across countries, the evidence within countries is limited.  I draw a inspiration from Lane Kenworthy to graph simple correlations between the two variables.  I do distinguish EPL by permanent, temporary, and the gap.  I also distinguish the temporary employment rate for all ages, prime ages (25-54), and younger workers.  
