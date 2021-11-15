@@ -73,7 +73,6 @@ df_temp_1 <- df_temp_0 %>%
                series == "PER_CENT_TEMP", # percent temporary
                age == "1524", # young workers
         ) %>%
-        select(country,obstime,obsvalue) %>%
         rename(year=obstime,
                temp=obsvalue) %>%
         mutate(year = as.numeric(year)) %>%
@@ -119,6 +118,7 @@ df_merge_diff <- droplevels(df_merge_diff)
 
 # Graph ----
 
+# Graphs the relationship between EPL (temp) and temporary employment
 df_graph <- df_merge %>%
         filter(series == "temp_epl")
 
@@ -142,6 +142,7 @@ ggplot(data = df_graph, aes(x = year)) +
               legend.position = "bottom"
         )
 
+# Graphs the relationship between EPL (perm) and temporary employment
 df_graph <- df_merge %>%
         filter(series == "perm_epl")
 
@@ -152,7 +153,7 @@ ggplot(data = df_graph, aes(x = year)) +
         theme_bw() +
         scale_color_manual(values = c("blue", "orange")) +
         scale_y_continuous(
-                name = "EPL (Temporary employment)",
+                name = "EPL (Permanent employment)",
                 sec.axis = sec_axis(~./10, name="Temporary employment (%)")
         ) +
         geom_text(aes(label=paste("r = ", cor)), 
@@ -165,6 +166,7 @@ ggplot(data = df_graph, aes(x = year)) +
               legend.position = "bottom"
         )
 
+# Graphs the relationship between EPL (gap) and temporary employment
 df_graph <- df_merge_diff
 
 ggplot(data = df_graph, aes(x = year)) +
