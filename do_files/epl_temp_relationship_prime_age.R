@@ -138,6 +138,9 @@ ggplot(data = df_graph, aes(x = year)) +
         ) +
         geom_text(aes(label=paste("r = ", cor)), 
                   size = 3, 
+                  check_overlap = TRUE,
+                  inherit.aes = FALSE, 
+                  show.legend = FALSE,
                   x=-Inf, y=Inf, hjust=-0.2, vjust=1.2)+
         theme(panel.grid.minor = element_blank(), 
               axis.line.y = element_line(color="black", size=.5),
@@ -164,6 +167,9 @@ ggplot(data = df_graph, aes(x = year)) +
         ) +
         geom_text(aes(label=paste("r = ", cor)), 
                   size = 3, 
+                  check_overlap = TRUE,
+                  inherit.aes = FALSE, 
+                  show.legend = FALSE,
                   x=-Inf, y=Inf, hjust=-0.2, vjust=1.2)+
         theme(panel.grid.minor = element_blank(), 
               axis.line.y = element_line(color="black", size=.5),
@@ -190,6 +196,9 @@ ggplot(data = df_graph, aes(x = year)) +
         ) +
         geom_text(aes(label=paste("r = ", cor)), 
                   size = 3, 
+                  check_overlap = TRUE,
+                  inherit.aes = FALSE, 
+                  show.legend = FALSE,
                   x=-Inf, y=Inf, hjust=-0.2, vjust=1.2)+
         theme(panel.grid.minor = element_blank(), 
               axis.line.y = element_line(color="black", size=.5),
